@@ -1,0 +1,212 @@
+@import (inline) 'reset.css';
+@import 'contact.less';
+
+/* tag selectors */
+html, body {
+	background-color: #FFF;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #333;
+	font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+	font-weight: bold;
+	margin: 1em 0;
+}
+
+h1 {
+	text-align: center;
+	letter-spacing: -1px;
+	font-size: 32px;
+}
+h1 a {
+	color: #000;
+}
+h2 {
+	font-size: 15pt;
+	font-weight: bold;
+}
+h3, h4, h5, h6 {
+	font-size: 10pt;
+}
+strong, b, .bold {
+	font-weight: bold;
+}
+em, i, .italic {
+	font-style: italic;
+}
+a {
+	text-decoration: none;
+	color: #2382c4;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+img {
+	border: 0;
+}
+small {
+	font-size: 8pt;
+}
+blockquote, q, code {
+	margin: 0;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 5px;
+	background: #F0F0F0;
+	border-left: 2px solid;
+}
+blockquote, code {
+	display: block;	
+}
+q {
+	display: inline;
+}
+blockquote, q {
+	border-color: #327eb0;
+}
+code {
+	border-color: #000;
+	font-family: Monaco, Lucida Console, Courier, monospace;
+	font-size: 10px;
+	text-shadow: #FFF 1px 1px 1px;
+}
+code.inline, q {
+	padding: 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 3px;
+}
+p {
+	margin: 1em 0;
+}
+blockquote p, code p {
+	margin: 0;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+/* end tag selectors */
+
+/* class selectors */
+.right, .float_right {
+	float: right;
+}
+.left, .float_left {
+	float: left;
+}
+.grey {
+	color: #555;
+}
+.black {
+	color: #000;
+}
+.bold {
+	font-weight: bold;
+}
+div.clear_both {
+	clear: both;
+}
+.center {
+	margin: 0 auto;
+}
+.alignLeft {
+	text-align: left;
+}
+.alignRight {
+	text-align: right;
+}
+.alignCenter {
+	text-align: center;
+}
+.inline {
+	display: inline;
+}
+.block {
+	display: block;
+}
+.no_margin {
+	margin: 0;
+}
+/* end class selectors */
+
+/* wrapper */
+div#wrapper {
+	width: 870px;
+}
+/* end wrapper */
+
+/* sidebar */
+div#sidebar {
+	width: 200px;
+	background: #888;
+	border: 1px solid #333;
+	border-top: none;
+	border-left: none;
+	border-radius: 0 0 20px 0;
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+div#sidebar a {
+	color: #000;
+}
+div#sidebar span.title {
+	color: #FFF;
+}
+div#sidebar a#nomulous {
+	text-align: center;
+	display: block;
+	color: #FFF;
+	font-size: 18pt;
+	font-weight: 100;
+}
+div#sidebar a#nomulous img {
+	border-bottom: 1px solid #000;
+	width: 200px;
+	height: 200px;
+}
+div#sidebar a#nomulous:hover {
+	opacity: 0.8;
+}
+div#sidebar ul {
+	list-style: none;
+	list-style-type: none;
+	padding-left: 15px;
+}
+div#sidebar > ul > li{
+	margin-bottom: 5px;
+}
+div#sidebar ul li ul li{
+	font-weight: 300;
+}
+/* end sidebar */
+
+/* content */
+div#content {
+	width: 600px;
+	padding-left: 269px;
+	padding-right: 100px;
+	min-height: 525px;
+	overflow: hidden; /* Needed to prevent h1 and p margins from showing up on the top and bottom. Weird. Can't make just y hidden because it's not W3 supported*/
+}
+/* end content */
+
+/* footer */
+div#footer {
+	color: #555;
+	font-size: 9pt;
+	text-align: center;
+	margin-bottom: 5px;
+}
+div#footer img.icon80x15 {
+	width: 80px;
+	height: 15px;
+}
+/* end footer */

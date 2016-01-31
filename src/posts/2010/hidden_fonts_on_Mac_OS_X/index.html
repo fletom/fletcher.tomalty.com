@@ -1,0 +1,93 @@
+<%inherit file='/include/post.mako'/>
+<%!
+	title = 'Hidden fonts on Mac OS X'
+	keywords = {'mac', 'typography', 'fonts'}
+	date = 'July 17th, 2010'
+%>
+
+<p>Over the course of a variety of design projects (websites, logos, slide shows, posters, etc.) I have slowly and proudly expanded my font collection beyond what is included by default in Mac OS X. For example, while working at an Authorized Apple Service Provider, I acquired one of my most prized possessions, the <a href='http://en.wikipedia.org/wiki/Myriad_Pro' target='_blank'>Myriad Pro</a> set. It's Apple's corporate font, used for most of their logos and website headings, etc., and it's really friggin' nice. Of course, I thought it would just be a cool font I could design with once in a while, or no more than a typography nerd's piece of elitist paraphernalia. I never thought it would make a difference, say, browsing the web, because designers know it isn't installed by default on any major operating system.</p>
+
+<p>But, as it turns out, I was wrong. The folks at <a href='http://www.zurb.com/' target='_blank'>ZURB</a> created an awesome looking <a href='http://www.zurb.com/playground/sliding-vinyl' target='_blank'>sliding vinyl demo</a> using CSS 3, which I happened upon the other day while reading my RSS feeds. Lo and behold, there it was. In the &lt;h1&gt;, Myriad Pro in all of it's glory, with a CSS gradient mask and text-shadow to boot. What a nice surprise! They must have known 99.99% of their visitors would not have seen the font, rendering in Helvetica instead -- maybe they just liked the way it looked in their own browsers? In any case, it made me smile.</p>
+
+<p>The moral of the story is: having extra fonts on your computer makes almost no difference at all, and if you aren't the type of person who would be made happy by a pretty font  (i.e., if you aren't a typography nerd, i.e., if you can't tell the difference between Arial and Helvetica), then I would advise against it, as having too many fonts slows down your computer. Moving on.</p>
+
+<p>As it turns out, there are a whole host of fonts that, for the above reason, are available to certain applications on Mac OS X, but not actually installed into the system-wide font library. I discovered this while looking for <a href='http://en.wikipedia.org/wiki/Palatino' target='_blank'>Palatino</a>, which I knew was installed somewhere, but couldn't find in my system fonts. I opened up Terminal.app, ran a simple <code class='inline'>locate -i palatino</code>, and found exactly what I was looking for. This, however, opened up a whole new dimension to my search: hidden fonts in Mac OS X.</p>
+
+<p>These little treats are literally littered all around the OS. To install them (as with all font files), you just double click on the icons, and Font Book will open up, with a dialogue asking you if you to confirm the installation.</p>
+
+<p>If you have iWork installed, then in <code class='inline'>/Library/Application Support/Apple/Fonts/iWork</code>, you will find lots of cool fonts that aren't normally available to the rest of the OS. These include:</p>
+
+<ul>
+	<li>Academy Engraved LET Fonts</li>
+	<li>Bank Gothic</li>
+	<li>Blackmoor LET Fonts</li>
+	<li>BlairMdITC TT-Medium</li>
+	<li>Bodoni Ornaments ITC TT</li>
+	<li>Bodoni SvtyTwo ITC TT</li>
+	<li>Bodoni SvtyTwo OS ITC TT</li>
+	<li>Bodoni SvtyTwo SC ITC TT</li>
+	<li>Bordeaux Roman Bold LET Fonts</li>
+	<li>Bradley Hand ITC TT-Bold</li>
+	<li>Capitals</li>
+	<li>Jazz LET Fonts</li>
+	<li>Mona Lisa Solid ITC TT</li>
+	<li>Palatino</li>
+	<li>Party LET Fonts</li>
+	<li>PortagoITC TT</li>
+	<li>Princetown LET Fonts</li>
+	<li>Santa Fe LET Fonts</li>
+	<li>Savoye LET Fonts</li>
+	<li>SchoolHouse Cursive B</li>
+	<li>SchoolHouse Printed A</li>
+	<li>Snell Roundhand</li>
+	<li>Stone Sans ITC TT</li>
+	<li>Synchro LET Fonts</li>
+	<li>Type Embellishments One LET</li>
+</ul>
+
+<p><img title='Princetown LET' src='Princetown-LET.png' alt='Princetown LET' width='565' height='463'/></p>
+
+<p>Similarly, if you have iLife installed, there are a bunch of fonts that come with iDVD, not available to the rest of the system. These are in <code class='inline'>/Applications/iDVD.app/Contents/Resources/Fonts</code> (Ctrl-Click on iDVD.app and select "Show Package Contents" to get there).</p>
+
+<ul>
+	<li>Academy Engraved LET Fonts</li>
+	<li>Algerian Condensed LET Fonts</li>
+	<li>Bank Gothic</li>
+	<li>BlairMdITC TT-Medium</li>
+	<li>Bodoni SvtyTwo SC ITC TT</li>
+	<li>Bradley Hand ITC TT-Bold</li>
+	<li>Cracked</li>
+	<li>Gadget</li>
+	<li>Handwriting - Dakota</li>
+	<li>Humana Serif ITC TT</li>
+	<li>Machine ITC TT</li>
+	<li>Palatino</li>
+	<li>PortagoITC TT</li>
+	<li>Santa Fe LET Fonts</li>
+	<li>Savoye LET Fonts</li>
+	<li>Snell Roundhand</li>
+	<li>Stone Sans ITC TT</li>
+	<li>Textile</li>
+	<li>Wanted LET Fonts</li>
+</ul>
+
+<p>Eight different versions of Lucida come with your standard installation of Java, but can only be found by going to <code class='inline'>/System/Library/Frameworks/JavaVM.framework/Home/lib/fonts/</code> (again, with the "Show Package Contents" trick).</p>
+
+<ul>
+	<li>LucidaBrightDemiBold</li>
+	<li>LucidaBrightDemiItalic</li>
+	<li>LucidaBrightItalic</li>
+	<li>LucidaBrightRegular</li>
+	<li>LucidaSansDemiBold</li>
+	<li>LucidaSansRegular</li>
+	<li>LucidaTypewriterBold</li>
+	<li>LucidaTypewriterRegular</li>
+</ul>
+
+<p>A font called Matrix Ticker is available in the ESPN widget, which is installed by default. It's at <code class='inline'>/Library/Widgets/ESPN.wdgt/ESPNTicker.dfont</code>.</p>
+
+<p>Another two widget fonts, found inside the Unit Converter widget, are at <code class='inline'>/Library/Widgets/Unit Converter.wdgt/DB LCD Temp-Black.ttf</code> and<code class='inline'>/Library/Widgets/Unit Converter.wdgt/UC-LCD.ttf</code>. These are pretty cool, mimicking the look of a <a href='http://en.wikipedia.org/wiki/Seven-segment_display' target='_blank'>seven-segment display</a>.</p>
+
+<p><img title='DB LCD Temp-Black' src='DB-LCD-Temp-Black.png' alt='DB LCD Temp-Black' width='408' height='455'/></p>
+
+<p>That's all I have for now. Let me know in the comments if there are others you have discovered. The more fonts, the better! (Hey, if I'm going to have a mindless consumer attitude towards something, it might as well be something that takes up no physical space and uses no natural resources, right?)</p>

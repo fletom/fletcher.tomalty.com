@@ -1,0 +1,18 @@
+<%inherit file='/include/base.mako'/>
+<%!
+	title = 'Error'
+	id = 'error'
+%>
+
+<%block name='head'>
+	${self.include_css('/css/error.css')}
+</%block>
+
+<h1>Error</h1>
+<p>*hiccup*</p>
+<div id='sadmac'></div>
+<div id='detail'>
+	<p>The page you requested could not be served.</p>
+	<p>Would you like to <a href='https://github.com/fletom/fletcher.tomalty.com/issues'>report an issue on GitHub</a>?</p>
+</div>
+
