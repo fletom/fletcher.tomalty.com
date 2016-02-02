@@ -10,7 +10,6 @@
 				<li><a href='/' title='I won&#39;t make you knock your heels together three times.'>Home</a></li>
 				<li><a href='/posts/' title='My contribution to the interblags.'>Posts</a></li>
 				<li><a href='/contact/' title='Please leave a message after the &ldquo;mailto:&rdquo; link, and I will get back to you as soon as I can.'>Contact</a></li>
-				<li><a href='http://www.linkedin.com/in/fletom'>Work</a></li>
 			</ul>
 		</li>
 		<li>
