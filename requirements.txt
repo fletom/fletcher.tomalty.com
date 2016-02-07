@@ -1,3 +1,2 @@
 pygreen
 mako
-htmlmin
