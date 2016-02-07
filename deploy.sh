@@ -1,5 +1,22 @@
+
+S3_BUCKET_NAME='fletcher.tomalty.com'
+EXCLUDE=('*.less')
+
+
+cd ./build
+EXCLUDE+=('*.redirect')
+
 aws s3 sync \
-	./build/ s3://fletcher.tomalty.com \
+	./ s3://$S3_BUCKET_NAME \
 	--acl 'public-read' \
-	--exclude '*.less' --exclude '*.redirect' \
+	${EXCLUDE[@]/#/--exclude } \
 	--delete
+
+for f in $(find . -name '*.redirect'); do
+	l=s3://$S3_BUCKET_NAME/${f#./}
+	l=${l%.redirect}
+	aws s3 cp \
+		$f $l \
+		--website-redirect $(cat $f) \
+		--acl 'public-read'
+done
