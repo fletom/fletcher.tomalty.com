@@ -24,7 +24,7 @@
 			<meta name='description' content='${self.attr.description | h}'/>
 		% endif
 		% if self.attr.keywords:
-			<meta name='keywords' content='${', '.join(self.attr.keywords) | h}'/>
+			<meta name='keywords' content='${', '.join(sorted(self.attr.keywords)) | h}'/>
 		% endif
 		<link rel='shortcut icon' type='image/jpeg' href='/img/sierpinski.jpg'/>
 		<%include file='google_analytics.mako'/>
